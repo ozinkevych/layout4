@@ -4,47 +4,39 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Забезпечує мінімальну висоту body рівну висоті вікна браузера */
+  min-height: 100vh;
 }
-
-/* Скидання стилів для списків та посилань */
 ul, ol {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 a, p {
   text-decoration: none;
   color: dimgrey;
   margin: 0;
   padding: 0;
 }
-
-/* Скидання стилів для заголовків */
 h1, h2, h3, h4, h5, h6 {
   all: initial;
 }
-
 h1 {
   font-size: 24px;
 }
-
 h4 {
   font-size: 16px;
 }
-
 /* Header */
 header{
+  background-color: white;
+  position: fixed;
   width: 100%;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
-
 .header-container {
   width: 100%;
   max-width: 1190px;
@@ -52,31 +44,27 @@ header{
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Центрує елементи по вертикалі */
+  align-items: center;
 }
-
 .header-logo-img {
   height: 80px;
   width: 80px;
   padding: 10px 0;
 }
-
 .menu {
   display: flex;
   align-items: center;
+  padding: 10px 0;
 }
-
 .main-list {
   display: flex;
 }
-
 .main-list li {
   margin: 20px;
   height: 20px;
   display: flex;
   align-items: center;
 }
-
 .main-list li a {
   display: block;
   height: 100%;
@@ -92,12 +80,6 @@ header{
   color: white;
 }
 @media screen and (max-width: 1024px) {
-  .header-container {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 900px) {
   .header-container{
     display: block;
     align-items: center;
@@ -109,9 +91,70 @@ header{
   .main-list, .header-logo-img{
     margin: 0 auto;
   }
+  .main-list li {
+    margin: 5px;
+  }
 }
-@media screen and (max-width: 768px){
-    .main-list{
-      display: none;
-    }
+@media screen and (max-width: 900px) {
+
+}
+@media screen and (max-width: 768px) {
+  .menu{
+    padding: 0;
+  }
+  .main-list{
+    display: none;
+  }
+  .header-container-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+  }
+  .burger-icon {
+    width: 25px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background-color: #337ab7;
+    border-radius: 2px;
+    padding: 7px;
+  }
+  .bar {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+  }
+  .burger-menu.show{
+    display: flex;
+    justify-content: center;
+  }
+  .main-list.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-list.show li {
+    border-right: none;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-logo-img{
+    height: 60px;
+    width: 60px;
+  }
+  .header-container-block{
+    padding: 0;
+  }
 }
