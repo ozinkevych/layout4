@@ -1,13 +1,35 @@
 @import "basic_style.scss";
 $color_1: white;
 $color_2: #337ab7;
+$color_3: #86898b;
+$color_4: #f7f7f7;
+$color_5: #3b3f43;
+$color_6: #7dbaea;
+$error-bg: #f8d7da;
+$error-border: #f5c2c7;
+a{
+  color: $color_3
+}
 h1 {
+  font-size: 34px;
+  font-weight: bold;
+  color: $color_5;
+}
+h2{
   font-size: 24px;
+  font-weight: bold;
+  color: $color_5;
 }
 h4 {
   font-size: 16px;
+  color: $color_3;
 }
-/* Header */
+%container{
+  max-width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+// Header
 header{
   background-color: white;
   position: fixed;
@@ -19,10 +41,8 @@ header{
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 .header-container {
+  @extend %container;
   width: 100%;
-  max-width: 1190px;
-  margin: 0 auto;
-  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +60,7 @@ header{
 .main-list {
   display: flex;
   li {
-    margin: 20px;
+    margin-left: 10px;
     height: 20px;
     display: flex;
     align-items: center;
@@ -60,6 +80,116 @@ header{
 .burger-menu{
   display: none;
 }
+// Form block
+.form-container{
+  background-color: $color_4;
+}
+.form-block{
+  @extend %container;
+  padding-top: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+//Content left
+.information {
+  align-self: flex-end;
+  padding-bottom: 85px;
+  width: 595px;
+  .information-title, {
+    margin: 0 auto;
+    max-width: 550px;
+    h1{
+      text-align: center;
+    }
+  }
+  .information-text{
+    margin: 0 auto;
+    padding-top: 30px;
+    max-width: 510px;
+    h4{
+      text-align: center;
+      line-height: 2;
+    }
+  }
+
+}
+// Form
+.registration-form {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: center;
+
+    label {
+      padding-bottom: 5px;
+      color: $color_3;
+
+      span {
+        color: red;
+        margin: auto 0;
+      }
+    }
+
+    h2 {
+      padding-bottom: 10px;
+    }
+
+    input {
+      border-radius: 8px;
+      width: 550px;
+      height: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border: 1px solid $color_3;
+
+      &:focus {
+        outline: none;
+        border-color: $color_2;
+        box-shadow: 0 0 2px 1px $color_6;
+      }
+    }
+  }
+
+  &.submitted {
+    input:invalid {
+      background-color: $error-bg;
+      border-color: $error-border;
+    }
+  }
+}
+
+.checkbox{
+  label{
+    a:focus{
+      outline: none;
+      box-shadow: none;
+    }
+    input{
+      width: 15px;
+      height: 15px;
+      outline: none;
+      box-shadow: $color_1;
+    }
+  }
+  padding-bottom: 20px;
+}
+.form-btn{
+  font-size: 16px;
+  padding: 20px 0;
+  width: 350px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: $color_2;
+  color: $color_1;
+}
+
+
+
 @media screen and (max-width: 1024px) {
   .header-container{
     display: block;
@@ -75,9 +205,28 @@ header{
   .main-list li {
     margin: 5px;
   }
-}
-@media screen and (max-width: 900px) {
+  .form-block{
+    flex-direction:column;
+  }
+  .information{
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .registration-form{
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 0;
+    .h2{
+      text-align: center;
+    }
+    div{
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
 
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .menu {
@@ -129,13 +278,45 @@ header{
       padding: 5px;
     }
   }
+  .information{
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 40px;
+    .information-title{
+      h1{
+        font-size: 24px;
+      }
+    }
+  }
+  .registration-form {
+    max-width: 500px;
+    padding: 0;
+    div{
+      max-width: 100%;
+      input{
+        max-width: 255px;
+      }
+      h2{
+        font-size: 22px;
+      }
+    }
+  }
+  .form-btn{
+    width: 280px;
+  }
 }
 @media screen and (max-width: 400px) {
-  .header-logo-img{
+  .header-logo-img {
     height: 60px;
     width: 60px;
   }
   .header-container-block {
     padding: 0;
+  }
+  .checkbox{
+    label{
+      display: flex;
+      max-width: 287px;
+    }
   }
 }
