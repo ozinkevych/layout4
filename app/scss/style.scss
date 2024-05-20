@@ -1,25 +1,6 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-ul, ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-a, p {
-  text-decoration: none;
-  color: dimgrey;
-  margin: 0;
-  padding: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-  all: initial;
-}
+@import "basic_style.scss";
+$color_1: white;
+$color_2: #337ab7;
 h1 {
   font-size: 24px;
 }
@@ -58,26 +39,26 @@ header{
 }
 .main-list {
   display: flex;
-}
-.main-list li {
-  margin: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-}
-.main-list li a {
-  display: block;
-  height: 100%;
-  padding: 0 10px;
+  li {
+    margin: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    a {
+      display: block;
+      height: 100%;
+      padding: 0 10px;
+      &:hover {
+        border-radius: 20px;
+        background-color: $color_2;
+        padding: 10px;
+        color: $color_1;
+      }
+    }
+  }
 }
 .burger-menu{
   display: none;
-}
-.main-list li a:hover {
-  border-radius: 20px;
-  background-color: #337ab7;
-  padding: 10px;
-  color: white;
 }
 @media screen and (max-width: 1024px) {
   .header-container{
@@ -99,13 +80,13 @@ header{
 
 }
 @media screen and (max-width: 768px) {
-  .menu{
-    padding: 0;
+  .menu {
+    padding: 0 0 10px 0;
   }
-  .main-list{
+  .main-list {
     display: none;
   }
-  .header-container-block{
+  .header-container-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,16 +106,16 @@ header{
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    background-color: #337ab7;
+    background-color: $color_2;
     border-radius: 2px;
     padding: 7px;
   }
   .bar {
     width: 80%;
     height: 2px;
-    background-color: white;
+    background-color: $color_1;
   }
-  .burger-menu.show{
+  .burger-menu.show {
     display: flex;
     justify-content: center;
   }
@@ -143,10 +124,10 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .main-list.show li {
-    border-right: none;
-    padding: 5px;
+    li {
+      border-right: none;
+      padding: 5px;
+    }
   }
 }
 @media screen and (max-width: 400px) {
@@ -154,7 +135,7 @@ header{
     height: 60px;
     width: 60px;
   }
-  .header-container-block{
+  .header-container-block {
     padding: 0;
   }
 }
