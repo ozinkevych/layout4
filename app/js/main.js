@@ -1,3 +1,27 @@
+
+$(document).ready(function(){
+    $('.slider-container-block').slick({
+        infinite: true,
+        slidesToShow: 3,
+        adaptiveWidth: true,
+        responsive:[{
+            breakpoint: 1300,
+            settings:{
+                slidesToShow: 2,
+                dots: true
+            }
+        },
+        {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ],
+
+
+    });
+});
 const burgerMenu = document.querySelector('.burger-menu');
 const mainMenu = document.querySelector('.main-list');
 
