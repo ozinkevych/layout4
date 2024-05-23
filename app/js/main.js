@@ -3,9 +3,10 @@ $(document).ready(function(){
     $('.slider-container-block').slick({
         infinite: true,
         slidesToShow: 3,
-        adaptiveWidth: true,
+        slidesToScroll: 1,
+
         responsive:[{
-            breakpoint: 1300,
+            breakpoint: 1200,
             settings:{
                 slidesToShow: 2,
                 dots: true
@@ -18,8 +19,22 @@ $(document).ready(function(){
                 }
             }
         ],
-
-
+    });
+});
+$(document).ready(function() {
+    $('.testimonials-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        centerMode: true,
+        slidesToScroll: 1,
+        centerPadding: '0',
+        fade: true,
+        dots: true,
+        cssEase: 'linear',
+        draggable: false,
+        swipe: false,
+        swipeToSlide: true,
     });
 });
 const burgerMenu = document.querySelector('.burger-menu');
