@@ -374,6 +374,59 @@ p {
     padding: 10px 20px;
   }
 }
+
+// mentors
+.mentors {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.mentors-container{
+  display: flex;
+}
+.testimonials-slide-container{
+  display: flex;
+}
+.mentors-title{
+  h2{
+    padding-right: 80px;
+    font-weight: normal;
+  }
+}
+.mentors-slider {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  max-width: 1190px;
+  padding: 0 15px;
+}
+.mentors-information{
+  display: flex;
+}
+.mentors-information-text{
+
+  h4{
+    text-align: left;
+    padding: 10px  0 10px 100px;
+    line-height: 1.5;
+
+  }
+}
+.mentors-information{
+  padding: 10px 0;
+  img{
+    padding-left: 40px;
+  }
+}
+.mentors-information-title{
+  padding: 20px  0 20px 100px;
+  text-align: left;
+  color: #3398da;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1300px) {
 .slider-block{
   max-width: 300px;
@@ -427,7 +480,11 @@ p {
       max-width: 750px;
       max-height: 400px;
     }
-
+  }
+  .mentors-information{
+    img{
+      width: 70%;
+    }
   }
 }
 @media screen and (max-width: 768px) {
@@ -475,17 +532,19 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     li {
       border-right: none;
       padding: 5px;
     }
   }
-  .information{
+  .information {
     max-width: 100%;
     padding-top: 0;
     padding-bottom: 40px;
-    .information-title{
-      h1{
+
+    .information-title {
+      h1 {
         font-size: 24px;
       }
     }
@@ -493,32 +552,36 @@ p {
   .registration-form {
     max-width: 500px;
     padding: 0;
-    div{
+
+    div {
       max-width: 100%;
-      .form-input, select{
+
+      .form-input, select {
         max-width: 255px;
       }
-      h2{
+
+      h2 {
         font-size: 22px;
       }
     }
   }
-  .form-btn{
+  .form-btn {
     width: 280px;
   }
-  .checkbox{
+  .checkbox {
     display: flex;
     justify-content: center;
     width: 287px;
-    input{
+
+    input {
       margin-bottom: 10px;
     }
   }
-  .checkbox-text{
+  .checkbox-text {
     display: inline;
     padding-left: 10px;
   }
-  .statistics-container{
+  .statistics-container {
     width: 500px;
     padding: 20px 0;
   }
@@ -527,9 +590,11 @@ p {
   }
   .video-container {
     padding: 20px 0;
+
     .video-container-text {
       padding: 10px 20px;
     }
+
     .video-container-link {
       iframe {
         height: 200px;
@@ -539,14 +604,43 @@ p {
   }
   .video-container-link {
     padding: 0 20px;
+
     iframe {
       max-width: 380px;
       max-height: 200px;
     }
   }
-  .video-container-text{
+  .video-container-text {
 
+    h4 {
+    }
+  }
+  .mentors-information {
+    display: flex;
+    flex-direction: column;
+  }
+  .mentors-title {
+    h2 {
+      padding: 0;
+      text-align: center;
+
+    }
+  }
+  .mentors-information-img{
+    display: flex;
+    justify-content: center;
+    img{
+      padding: 0;
+    }
+  }
+  .mentors-information-title{
+    padding: 20px 0;
+    text-align: center;
+  }
+  .mentors-information-text{
     h4{
+      padding: 10px 0;
+      text-align: center;
     }
   }
 }

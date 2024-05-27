@@ -46,7 +46,20 @@ $(document).ready(function() {
         swipe: false,
         swipeToSlide: true
     });
-
+    $('.mentors-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false,
+        centerMode: true,
+        slidesToScroll: 1,
+        centerPadding: '0',
+        fade: true,
+        dots: true,
+        cssEase: 'linear',
+        draggable: false,
+        swipe: false,
+        swipeToSlide: true
+    });
     // Form validation
     document.querySelector('.form-btn').addEventListener('click', function(event) {
         let form = document.querySelector('.registration-form');
