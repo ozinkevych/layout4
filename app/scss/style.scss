@@ -1,6 +1,7 @@
 @import "basic_style.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
 @import "../../node_modules/slick-carousel/slick/slick.css";
+@import '../../node_modules/fortawesome/fontawesome-free/css/all.min.css';
 
 $color_1: white;
 $color_2: #337ab7;
@@ -203,61 +204,43 @@ header{
   color: $color_1;
 }
 // Slider
-.slider{
-  max-width: 1190px;
-  padding: 0 15px;
-  margin: 0 auto;
-  .slider-title{
-    h1{
-      text-align: center;
-      font-size: 26px;
-    }
-  }
+.website-slider {
+  display: none; /* Змінюється на block через JavaScript після ініціалізації слайдера */
 }
-.slider-container{
-  padding: 80px 0;
+
+.website-slider.slick-slider {
+  display: block;
 }
-.slider-container-block{
-  width: 100%;
-}
-.slider-block{
-  box-sizing: border-box;
+
+.slider-block {
   padding: 20px;
-  .slider-block-img{
-    padding: 20px 0;
-
-  }
-  hr{
-    height: 1px;
-    border: none;
-    background-color: $color_2;
-    width: 360px;
-    margin: 10px auto;
-  }
-  .slider-block-title{
-    text-align: center;
-    h2{
-      color: #7d7d7d;
-      font-size: 22px;
-    }
-  }
-  .slider-block-text{
-    h4{
-      padding: 20px 0;
-      line-height: 1.5;
-    }
-    text-align: center;
-    width: 360px;
-    margin: 0 auto;
-  }
-  .slider-block-img{
-    justify-content: center;
-    img{
-      margin: 0 auto;
-    }
-  }
-
+  text-align: center;
+  box-sizing: border-box; /* Щоб padding враховувався в загальну ширину */
 }
+
+.slider-block-img img {
+  max-width: 100px;
+  height: auto;
+}
+
+.slider-block-title h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.slider-block-text h4 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Додаткові стилі для адаптивності */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 //statistics-block
 .statistics-block{
@@ -271,7 +254,7 @@ header{
 }
 
 .statistics-block-container{
-  padding-left: 100px;
+  width: 275px;
   text-align: center;
   h2{
     padding: 20px 0;
@@ -427,10 +410,60 @@ p {
   font-weight: bold;
 }
 
-@media screen and (max-width: 1300px) {
-.slider-block{
-  max-width: 300px;
+// CTA
+.call{
+  background-color: #3398da;
 }
+.call-container{
+  @extend %container;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+}
+
+.call-block-container{
+  width: 196px;
+
+  text-align: center;
+  h2{
+    padding: 20px 0;
+    color: $color_1;
+  }
+  h4{
+    color: $color_1;
+  }
+  a{
+    color: $color_1;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.call-block-icons{
+  font-size: 55px;
+  color: $color_1;
+}
+//footer
+.footer-container{
+  @extend %container;
+  text-align: center;
+  padding: 50px 0;
+  div{
+    padding: 10px 0;
+  }
+}
+.footer-container-info{
+  h4{
+    color: #337ab7;
+  }
+}
+.footer-container-conditions{
+  a{
+    &:hover{
+      color: #337ab7;
+      text-decoration: underline;
+    }
+  }
 }
 @media screen and (max-width: 1024px) {
   .header-container {
@@ -474,6 +507,9 @@ p {
   .statistics-block-container {
     padding: 10px;
   }
+  .call-block-container {
+    padding: 10px;
+  }
   .video-container-link {
     padding: 0 20px;
     iframe {
@@ -481,12 +517,16 @@ p {
       max-height: 400px;
     }
   }
-  .mentors-information{
-    img{
-      width: 70%;
-    }
+  .slider-block-title h2 {
+    font-size: 18px;
+  }
+
+  .slider-block-text h4 {
+    font-size: 14px;
   }
 }
+
+
 @media screen and (max-width: 768px) {
   .menu {
     padding: 0 0 10px 0;
@@ -581,11 +621,14 @@ p {
     display: inline;
     padding-left: 10px;
   }
-  .statistics-container {
+  .statistics-container{
     width: 500px;
     padding: 20px 0;
   }
-  .statistics-block-container {
+  .call-container{
+    padding: 20px 0;
+  }
+  .statistics-block-container{
     padding: 0 10px;
   }
   .video-container {
@@ -643,9 +686,14 @@ p {
       text-align: center;
     }
   }
+  .mentors-information{
+    img{
+      width: 70%;
+    }
+  }
 }
 @media screen and (max-width: 600px) {
-  .statistics-container {
+  .statistics-container, .call-container {
     width: 280px;
     display: flex;
     flex-wrap: wrap;
@@ -661,8 +709,26 @@ p {
       padding: 10px 0;
       font-size: 16px;
     }
-
     h4 {
+      font-size: 10px;
+    }
+  }
+  .call-block-container{
+    width: 125px;
+    padding: 5px;
+    .call-block-icons{
+      font-size: 30px;
+    }
+    h2{
+      padding: 10px 0;
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 10px;
+    }
+  }
+  .call-block-text{
+    a{
       font-size: 10px;
     }
   }

@@ -8,24 +8,27 @@ $(document).ready(function() {
     });
 
     // Initialize the slider
-    $('.slider-container-block').slick({
+    $('.website-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
+        dots: true,
         responsive: [
             {
-                breakpoint: 850,
+                breakpoint: 900,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
             }
         ]
@@ -46,6 +49,7 @@ $(document).ready(function() {
         swipe: false,
         swipeToSlide: true
     });
+
     $('.mentors-slider').slick({
         autoplay: true,
         autoplaySpeed: 4000,
