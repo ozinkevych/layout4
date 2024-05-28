@@ -11,12 +11,9 @@ $(document).ready(function() {
     $('.website-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        dots: true,
         responsive: [
             {
-                breakpoint: 900,
+                breakpoint: 850,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -37,7 +34,7 @@ $(document).ready(function() {
     // Initialize the testimonials slider
     $('.testimonials-slider').slick({
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed:  10000,
         arrows: false,
         centerMode: true,
         slidesToScroll: 1,
@@ -52,12 +49,11 @@ $(document).ready(function() {
 
     $('.mentors-slider').slick({
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 10000,
         arrows: false,
         centerMode: true,
         slidesToScroll: 1,
         centerPadding: '0',
-        fade: true,
         dots: true,
         cssEase: 'linear',
         draggable: false,

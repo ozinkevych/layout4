@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maket 4</title>
+    <title>Model4</title>
     <link rel="stylesheet" href="css/style.min.css">
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -26,12 +27,12 @@
         </div>
         <div class="menu">
             <ul class="main-list">
-                <li><a href="#">Головна</a></li>
-                <li><a href="#">Програма курсу</a></li>
-                <li><a href="#">Відгуки про курс</a></li>
-                <li><a href="#">Відео</a></li>
-                <li><a href="#">Ментори</a></li>
-                <li><a href="#">Подати заявку</a></li>
+                <li><a href="#registration">Головна</a></li>
+                <li><a href="#course-program">Програма курсу</a></li>
+                <li><a href="#reviews">Відгуки про курс</a></li>
+                <li><a href="#video">Відео</a></li>
+                <li><a href="#mentors">Ментори</a></li>
+                <li><a href="#registration">Подати заявку</a></li>
             </ul>
         </div>
     </div>
@@ -46,21 +47,21 @@
                 <h4>Сфера IT розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що повязана з ІТ. Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. ІТ школа ОхІТ створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання. щоб стати ІТ спеціалістом. Чекаємо вас на нших курсах 3 програмування в Луцьку. Старт наступного курсу 3 серпня.</h4>
             </div>
         </div>
-        <div class="registration">
+        <div class="registration" id="registration">
             <form class="registration-form" novalidate>
                 <div>
                     <h2>Зареєструватися на курси</h2>
                 </div>
                 <div>
-                    <label for="name">Ім'я<span>*</span></label>
+                    <label for="name">Ім'я<img src="img/icons/required.png" alt="required"></label>
                     <input class="form-input" type="text" id="name" name="name" required placeholder="Ім'я" pattern="[А-Яа-яA-Za-zЁёІіЇїҐґЄє]*" minlength="4" maxlength="30" title="Не вірний формат імені">
                 </div>
                 <div>
-                    <label for="surname">Прізвище<span>*</span></label>
+                    <label for="surname">Прізвище<img src="img/icons/required.png" alt="required"></label>
                     <input class="form-input" type="text" id="surname" name="surname" required placeholder="Прізвище"  pattern="[А-Яа-яA-Za-zЁёІіЇїҐґЄє]*" minlength="4" maxlength="30">
                 </div>
                 <div>
-                    <label for="interest">Мене більше цікавить<span>*</span></label>
+                    <label for="interest">Мене більше цікавить<img src="img/icons/required.png" alt="required"></label>
                     <select class="form-input" id="interest" name="interest" required>
                         <option value="" disabled selected> developer or QA</option>
                         <option value="developer">developer</option>
@@ -68,17 +69,17 @@
                     </select>
                 </div>
                 <div>
-                    <label for="tel">Номер телефону<span>*</span></label>
-                    <input class="form-input" id="tel" name="tel" pattern="[0-9]*" required minlength="12" placeholder="Номер телефону: +38 XXX XX XX XXX">
+                    <label for="tel">Номер телефону<img src="img/icons/required.png" alt="required"></label>
+                    <input class="form-input" id="tel" name="tel" pattern="[0-9]*" required minlength="10" placeholder="Номер телефону: +38 XXX XX XX XXX">
                 </div>
                 <div>
-                    <label for="email">Email<span>*</span></label>
+                    <label for="email">Email<img src="img/icons/required.png" alt="required"></label>
                     <input class="form-input" type="email" id="email" name="email" required placeholder="Email">
                 </div>
-                <div >
+                <div>
                     <label class="checkbox" for="Checkbox">
                         <input type="checkbox" id="Checkbox" name="Checkbox" required>
-                        <label class="checkbox-text" for="Checkbox">Я погоджуюся із <a href="#">Політикою Конфіденційності</a><span>*</span></label>
+                        <span>Я погоджуюся із <a href="#privacy-policy">Політикою Конфіденційності</a><img src="img/icons/required.png" alt="required"></span>
                     </label>
                 </div>
                 <button class="form-btn" type="submit">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
@@ -86,7 +87,7 @@
         </div>
     </div>
 </div>
-<div class="website-development">
+<div class="website-development" id="course-program">
     <div class="website-development-container">
         <div class="website-development-title">
             <h1>Курс «Розробка сайтів»</h1>
@@ -94,7 +95,7 @@
         <div class="website-slider">
             <div class="slider-block">
                 <div class="slider-block-img">
-                    <img src="img/icons/course-icon-1.png" alt="">
+                    <img src="img/icons/course-icon-1.png" alt="course-icon-1">
                 </div>
                 <div class="slider-block-title">
                     <h2>Розробка сайтів на WordPress</h2>
@@ -106,38 +107,26 @@
             </div>
             <div class="slider-block">
                 <div class="slider-block-img">
-                    <img src="img/icons/course-icon-1.png" alt="">
+                    <img src="img/icons/course-icon-2.png" alt="course-icon-2">
                 </div>
                 <div class="slider-block-title">
-                    <h2>Розробка сайтів на WordPress</h2>
+                    <h2>Розробка сайтів на Drupal 8</h2>
                 </div>
                 <hr>
                 <div class="slider-block-text">
-                    <h4>Курс складається з коротких навчальних відео, на яких ти пізнаєш основи WordPress, навчишся створювати сайти різноі складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</h4>
+                    <h4>Для створення чудових сайтів на Drupal 8, цеглинка за цеглинкою, ти пізнаєш секрети основних та додаткових Drupal-модулів (Views, Rules, Panels, Devel, Paragraph та багатьох інших).</h4>
                 </div>
             </div>
             <div class="slider-block">
                 <div class="slider-block-img">
-                    <img src="img/icons/course-icon-1.png" alt="">
+                    <img src="img/icons/course-icon-2.png" alt="course-icon-2">
                 </div>
                 <div class="slider-block-title">
-                    <h2>Розробка сайтів на WordPress</h2>
+                    <h2>Ознайомлення з тестуванням</h2>
                 </div>
                 <hr>
                 <div class="slider-block-text">
-                    <h4>Курс складається з коротких навчальних відео, на яких ти пізнаєш основи WordPress, навчишся створювати сайти різноі складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</h4>
-                </div>
-            </div>
-            <div class="slider-block">
-                <div class="slider-block-img">
-                    <img src="img/icons/course-icon-1.png" alt="">
-                </div>
-                <div class="slider-block-title">
-                    <h2>Розробка сайтів на WordPress</h2>
-                </div>
-                <hr>
-                <div class="slider-block-text">
-                    <h4>Курс складається з коротких навчальних відео, на яких ти пізнаєш основи WordPress, навчишся створювати сайти різноі складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</h4>
+                    <h4>Ти дізнаєшся про забезпечення якості в контексті різних моделей розробки ПЗ. Також QA-спеціаліст розкаже про види тестування (функціональне, регресивне, системне, тестування швидкодії тощо).</h4>
                 </div>
             </div>
         </div>
@@ -147,7 +136,7 @@
     <div class="statistics-container">
         <div class="statistics-block-container">
             <div class="statistics-block-img">
-                <img src="img/icons/statistic-icon-1.png">
+                <img src="img/icons/statistic-icon-1.png" alt="statistic-icon-1">
             </div>
             <div class="statistics-block-title">
                 <h2>25</h2>
@@ -158,7 +147,7 @@
         </div>
         <div class="statistics-block-container">
             <div class="statistics-block-img">
-                <img src="img/icons/statistic-icon-2.png">
+                <img src="img/icons/statistic-icon-2.png" alt="statistic-icon-2">
             </div>
             <div class="statistics-block-title">
                 <h2>836</h2>
@@ -169,7 +158,7 @@
         </div>
         <div class="statistics-block-container">
             <div class="statistics-block-img">
-                <img src="img/icons/statistic-icon-3.png">
+                <img src="img/icons/statistic-icon-3.png" alt="statistic-icon-3">
             </div>
             <div class="statistics-block-title">
                 <h2>500</h2>
@@ -180,7 +169,7 @@
         </div>
         <div class="statistics-block-container">
             <div class="statistics-block-img">
-                <img src="img/icons/statistic-icon-4.png">
+                <img src="img/icons/statistic-icon-4.png" alt="statistic-icon-4">
             </div>
             <div class="statistics-block-title">
                 <h2>120</h2>
@@ -191,7 +180,7 @@
         </div>
     </div>
 </div>
-<div class="testimonials">
+<div class="testimonials" id="reviews">
     <div class="testimonials-slider">
         <div class="testimonials-slide-container">
             <div class="testimonials-block">
@@ -200,13 +189,13 @@
                 </div>
                 <div class="testimonials-container">
                     <div class="testimonials-upper-legs">
-                        <p>“</p>
+                        <i class="fa-solid fa-quote-left"></i>
                     </div>
                     <div class="testimonials-block-text">
                         <h4>Під час проходження курсів Drupal у школі ОхІТ я навчився створювати не досить складні сайти та знайшов справу, якою хочу займатись. Після успішного завершення курсів мені надали можливість продовжити навчання вже в якості Intern Site Builder. Зараз я можу сказати, що Drupal та OxIT повністю змінили моє життя.  </h4>
                     </div>
                     <div class="testimonials-lower-legs">
-                        <p>„</p>
+                        <i class="fa-solid fa-quote-right"></i>
                     </div>
                 </div>
                 <div class="testimonials-block-user">
@@ -224,13 +213,13 @@
                 </div>
                 <div class="testimonials-container">
                     <div class="testimonials-upper-legs">
-                        <p>“</p>
+                        <i class="fa-solid fa-quote-left"></i>
                     </div>
                     <div class="testimonials-block-text">
                         <h4>Під час проходження курсів Drupal у школі ОхІТ я навчився створювати не досить складні сайти та знайшов справу, якою хочу займатись. Після успішного завершення курсів мені надали можливість продовжити навчання вже в якості Intern Site Builder. Зараз я можу сказати, що Drupal та OxIT повністю змінили моє життя.  </h4>
                     </div>
                     <div class="testimonials-lower-legs">
-                        <p>„</p>
+                        <i class="fa-solid fa-quote-right"></i>
                     </div>
                 </div>
                 <div class="testimonials-block-user">
@@ -248,13 +237,13 @@
                 </div>
                 <div class="testimonials-container">
                     <div class="testimonials-upper-legs">
-                        <p>“</p>
+                        <i class="fa-solid fa-quote-left"></i>
                     </div>
                     <div class="testimonials-block-text">
                         <h4>Під час проходження курсів Drupal у школі ОхІТ я навчився створювати не досить складні сайти та знайшов справу, якою хочу займатись. Після успішного завершення курсів мені надали можливість продовжити навчання вже в якості Intern Site Builder. Зараз я можу сказати, що Drupal та OxIT повністю змінили моє життя.  </h4>
                     </div>
                     <div class="testimonials-lower-legs">
-                        <p>„</p>
+                        <i class="fa-solid fa-quote-right"></i>
                     </div>
                 </div>
                 <div class="testimonials-block-user">
@@ -267,7 +256,7 @@
         </div>
     </div>
 </div>
-<div class="video">
+<div class="video" id="video">
     <div class="video-container">
         <div class="video-container-title">
             <h2>Відео</h2>
@@ -280,7 +269,7 @@
         </div>
     </div>
 </div>
-<div class="mentors">
+<div class="mentors" id="mentors">
     <div class="mentors-slider">
         <div class="mentors-slider-container">
             <div class="mentors-block">
@@ -289,7 +278,7 @@
                 </div>
                 <div class="mentors-information">
                     <div class="mentors-information-img">
-                        <img src="img/viktor.png">
+                        <img src="img/viktor.png" alt="viktor">
                     </div>
                     <div class="mentors-information-block">
                         <div class="mentors-information-title">
@@ -313,7 +302,7 @@
                 </div>
                 <div class="mentors-information">
                     <div class="mentors-information-img">
-                        <img src="img/mark.png">
+                        <img src="img/mark.png" alt="mark">
                     </div>
                     <div class="mentors-information-block">
                         <div class="mentors-information-title">
@@ -337,7 +326,7 @@
                 </div>
                 <div class="mentors-information">
                     <div class="mentors-information-img">
-                        <img src="img/vova.png">
+                        <img src="img/vova.png" alt="vova">
                     </div>
                     <div class="mentors-information-block">
                         <div class="mentors-information-title">
@@ -357,9 +346,9 @@
     </div>
 </div>
 <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2048.1848070407495!2d25.317419865291864!3d50.71460671248067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1sru!2sua!4v1716803515638!5m2!1sru!2sua&amp;zoom=20" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2048.1848070407495!2d25.317419865291864!3d50.71460671248067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1sru!2sua!4v1716803515638!5m2!1sru!2sua&amp;zoom=20" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<div class="call">
+<div class="call" id="cta">
     <div class="call-container">
         <div class="call-block-container">
             <div class="call-block-icons">
@@ -369,7 +358,7 @@
                 <h2>Телефон</h2>
             </div>
             <div class="call-block-text">
-                <a href="#tel">+38 067 332 17 55</a>
+                <a href="tel:+380673321755">+38 067 332 17 55</a>
             </div>
         </div>
         <div class="call-block-container">
@@ -380,7 +369,7 @@
                 <h2>E-mail</h2>
             </div>
             <div class="call-block-text">
-                <h4 href="">ofice@it.volyn.ua</h4>
+                <h4>ofice@it.volyn.ua</h4>
             </div>
         </div>
         <div class="call-block-container">
@@ -402,18 +391,18 @@
                 <h2>Facebook</h2>
             </div>
             <div class="call-block-text">
-                <a href="#">facebook.com/oxitschool</a>
+                <a href="#cta">facebook.com/oxitschool</a>
             </div>
         </div>
     </div>
 </div>
-<footer>
+<footer id="privacy-policy">
     <div class="footer-container">
       <div class="footer-container-info">
             <h4>© Copyright 2018-2020 Internet Devels</h4>
       </div>
       <div class="footer-container-conditions">
-            <a href="#">Умови політики конфіденційності</a>
+            <a href="#privacy-policy">Умови політики конфіденційності</a>
       </div>
     </div>
 </footer>

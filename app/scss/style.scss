@@ -3,30 +3,31 @@
 @import "../../node_modules/slick-carousel/slick/slick.css";
 @import '../../node_modules/fortawesome/fontawesome-free/css/all.min.css';
 
-$color_1: white;
-$color_2: #337ab7;
-$color_3: #86898b;
-$color_4: #f7f7f7;
-$color_5: #3b3f43;
-$color_6: #7dbaea;
+$background_color_1: white;
+$button_color: #337ab7;
+$font_color: #86898b;
+$background_color_2: #f7f7f7;
+$font_color_dark: #3b3f43;
+$box_shadow: #7dbaea;
 $error-bg: #f8d7da;
 $error-border: #f5c2c7;
+$blue_background: #3398da;
 a{
-  color: $color_3
+  color: $font_color;
 }
 h1 {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: bold;
-  color: $color_5;
+  color: $font_color_dark;
 }
 h2{
   font-size: 24px;
   font-weight: bold;
-  color: $color_5;
+  color: $font_color_dark;
 }
 h4 {
   font-size: 16px;
-  color: $color_3;
+  color: $font_color;
 }
 %container{
   max-width: 1190px;
@@ -35,13 +36,14 @@ h4 {
 }
 // Header
 header{
-  background-color: white;
+  background-color: $background_color_1;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  z-index: 1000;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 .header-container {
@@ -59,7 +61,7 @@ header{
 .menu {
   display: flex;
   align-items: center;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .main-list {
   display: flex;
@@ -74,9 +76,9 @@ header{
       padding: 0 10px;
       &:hover {
         border-radius: 20px;
-        background-color: $color_2;
+        background-color: $button_color;
         padding: 10px;
-        color: $color_1;
+        color: $background_color_1;
       }
     }
   }
@@ -86,7 +88,7 @@ header{
 }
 // Form block
 .form-container{
-  background-color: $color_4;
+  background-color: $background_color_2;
 }
 .form-block{
   @extend %container;
@@ -108,14 +110,13 @@ header{
   }
   .information-text{
     margin: 0 auto;
-    padding-top: 40px;
-    max-width: 510px;
+    padding-top: 50px;
+    max-width: 440px;
     h4{
       text-align: center;
-      line-height: 2;
+      line-height: 1.7;
     }
   }
-
 }
 // Form
 .registration-form {
@@ -130,13 +131,20 @@ header{
     justify-content: center;
 
     label {
+      display: flex;
       padding-bottom: 5px;
-      color: $color_3;
+      color: $font_color;
       a:hover {
-        color: $color_2;
+        color: $button_color;
       }
-      span {
-        color: red;
+      img {
+        width: 8px;
+        height: 8px;
+        margin: auto 0;
+        padding-left: 2px;
+      }
+      span{
+        padding-left: 10px;
       }
     }
 
@@ -146,23 +154,22 @@ header{
     select{
       align-items: center;
       all: unset;
-      background-color: $color_1;
+      background-color: $background_color_1;
     }
-
     .form-input {
       border-radius: 8px;
       width: 550px;
       height: 50px;
       padding-left: 15px;
       padding-right: 15px;
-      border: 1px solid $color_3;
+      border: 1px solid $font_color;
       align-items: center;
       font-size: 14px;
-      color: $color_3;
+      color: $font_color;
       &:focus {
         outline: none;
-        border-color: $color_2;
-        box-shadow: 0 0 2px 1px $color_6;
+        border-color: $button_color;
+        box-shadow: 0 0 2px 1px $box_shadow;
       }
     }
   }
@@ -176,75 +183,81 @@ header{
       background-color: $error-bg;
       border-color: $error-border;
     }
+    .checkbox input:invalid + span {
+      text-decoration: underline;
+      text-decoration-color: $error-border;
+      text-decoration-thickness: 2px;
+    }
   }
 }
 
-.checkbox{
-  label{
-    a:focus{
-      outline: none;
-      box-shadow: none;
-    }
-    input{
-      width: 15px;
-      height: 15px;
-      outline: none;
-      box-shadow: $color_1;
-    }
-  }
-  padding-bottom: 20px;
-}
+
 .form-btn{
   font-size: 16px;
   padding: 20px 0;
   width: 350px;
   margin: 40px auto;
   border-radius: 20px;
-  background-color: $color_2;
-  color: $color_1;
+  background-color: $button_color;
+  color: $background_color_1;
 }
 // Slider
+.website-development-title{
+  text-align: center;
+  padding-top: 40px;
+  h1{
+    font-weight: normal;
+  }
+}
 .website-slider {
-  display: none; /* Змінюється на block через JavaScript після ініціалізації слайдера */
+  padding-bottom: 30px;
+  display: none;
+  @extend %container;
 }
 
-.website-slider.slick-slider {
-  display: block;
+.website-slider {
+  &.slick-slider {
+    display: block;
+  }
 }
-
+.slider-block-img{
+  img{
+    margin: 0 auto;
+  }
+}
+.slider-block-text{
+  padding: 10px 5px;
+  h4{
+    line-height: 1.5;
+  }
+}
 .slider-block {
   padding: 20px;
   text-align: center;
-  box-sizing: border-box; /* Щоб padding враховувався в загальну ширину */
+  box-sizing: border-box;
+  hr{
+    border: none;
+    border-top: 1px solid $button_color;
+    margin: 0 20px
+  }
 }
+.slider-block-title{
+  h2{
+    font-size: 18px;
+    margin: 10px 0;
+    color: $font_color;
+  }
 
-.slider-block-img img {
-  max-width: 100px;
-  height: auto;
 }
-
-.slider-block-title h2 {
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.slider-block-text h4 {
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-/* Додаткові стилі для адаптивності */
 .slick-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-
 //statistics-block
 .statistics-block{
-  background-color: #3398da;
+  background-color: $blue_background;
 }
 .statistics-container{
   @extend %container;
@@ -258,10 +271,10 @@ header{
   text-align: center;
   h2{
     padding: 20px 0;
-    color: $color_1;
+    color: $background_color_1;
   }
   h4{
-    color: $color_1;
+    color: $background_color_1;
   }
 }
 //testimonials (slider)
@@ -283,7 +296,7 @@ header{
 }
 .testimonials-block-title {
   h2 {
-    color: $color_5;
+    color: $font_color_dark;
     font-weight: normal;
     font-size: 30px;
   }
@@ -306,14 +319,25 @@ header{
 .testimonials-block-specialty {
   font-size: 14px;
   h5 {
-    color: $color_3;
+    color: $font_color;
     font-style: italic;
   }
 }
-p {
-  font-size: 100px;
-  color: $color_3;
-  padding: 0 10px;
+.testimonials-lower-legs {
+  i {
+    font-size: 50px;
+    color: $font_color;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+}
+.testimonials-upper-legs {
+  i {
+    font-size: 50px;
+    color: $font_color;
+    padding: 0 10px;
+
+  }
 }
 .slick-dots li {
   margin: 0;
@@ -329,7 +353,7 @@ p {
 //video
 .video{
   width: 100%;
-  background-color: $color_4;
+  background-color: $background_color_2;
   .video-container {
     @extend %container;
     padding: 40px 0;
@@ -352,7 +376,8 @@ p {
   justify-content: center;
 
   iframe {
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     height: 500px;
     padding: 10px 20px;
   }
@@ -389,7 +414,6 @@ p {
   display: flex;
 }
 .mentors-information-text{
-
   h4{
     text-align: left;
     padding: 10px  0 10px 100px;
@@ -406,13 +430,20 @@ p {
 .mentors-information-title{
   padding: 20px  0 20px 100px;
   text-align: left;
-  color: #3398da;
+  color: $blue_background;
   font-weight: bold;
 }
-
+//map
+.map{
+  iframe{
+    width: 100%;
+    height: 400px;
+    border: none;
+  }
+}
 // CTA
 .call{
-  background-color: #3398da;
+  background-color: $blue_background;
 }
 .call-container{
   @extend %container;
@@ -422,18 +453,18 @@ p {
 }
 
 .call-block-container{
-  width: 196px;
+  width: 210px;
 
   text-align: center;
   h2{
     padding: 20px 0;
-    color: $color_1;
+    color: $background_color_1;
   }
   h4{
-    color: $color_1;
+    color: $background_color_1;
   }
   a{
-    color: $color_1;
+    color: $background_color_1;
     &:hover{
       text-decoration: underline;
     }
@@ -441,7 +472,7 @@ p {
 }
 .call-block-icons{
   font-size: 55px;
-  color: $color_1;
+  color: $background_color_1;
 }
 //footer
 .footer-container{
@@ -455,6 +486,7 @@ p {
 .footer-container-info{
   h4{
     color: #337ab7;
+    padding: 0 10px;
   }
 }
 .footer-container-conditions{
@@ -465,7 +497,9 @@ p {
     }
   }
 }
+
 @media screen and (max-width: 1024px) {
+
   .header-container {
     display: block;
     align-items: center;
@@ -479,6 +513,8 @@ p {
   }
   .main-list li {
     margin: 5px;
+    padding-bottom: 10px;
+    font-size: 15px;
   }
   .form-block {
     flex-direction: column;
@@ -513,12 +549,14 @@ p {
   .video-container-link {
     padding: 0 20px;
     iframe {
-      max-width: 750px;
+      max-width: 1024px;
       max-height: 400px;
     }
   }
-  .slider-block-title h2 {
-    font-size: 18px;
+  .slider-block-title{
+    h2{
+      font-size: 18px;
+    }
   }
 
   .slider-block-text h4 {
@@ -534,13 +572,18 @@ p {
   .main-list {
     display: none;
   }
+  .header-container{
+    max-width: 730px;
+  }
   .header-container-block {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+
   }
   .burger-menu {
+    max-width: 768px;
     display: block;
     cursor: pointer;
     justify-content: center;
@@ -554,14 +597,14 @@ p {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    background-color: $color_2;
+    background-color: $button_color;
     border-radius: 2px;
     padding: 7px;
   }
   .bar {
     width: 80%;
     height: 2px;
-    background-color: $color_1;
+    background-color: $background_color_1;
   }
   .burger-menu.show {
     display: flex;
@@ -578,6 +621,15 @@ p {
       padding: 5px;
     }
   }
+  .registration-form {
+    div {
+      label {
+        a:after {
+          color: $button_color;
+        }
+      }
+    }
+  }
   .information {
     max-width: 100%;
     padding-top: 0;
@@ -585,7 +637,12 @@ p {
 
     .information-title {
       h1 {
-        font-size: 24px;
+        font-size: 21px;
+      }
+    }
+    .information-text{
+      h4{
+        font-size: 13px;
       }
     }
   }
@@ -601,7 +658,7 @@ p {
       }
 
       h2 {
-        font-size: 22px;
+        font-size: 19px;
       }
     }
   }
@@ -616,10 +673,6 @@ p {
     input {
       margin-bottom: 10px;
     }
-  }
-  .checkbox-text {
-    display: inline;
-    padding-left: 10px;
   }
   .statistics-container{
     width: 500px;
@@ -640,7 +693,8 @@ p {
 
     .video-container-link {
       iframe {
-        height: 200px;
+        max-width: 768px;
+
         padding: 5px 10px;
       }
     }
@@ -682,8 +736,9 @@ p {
   }
   .mentors-information-text{
     h4{
-      padding: 10px 0;
+      padding: 5px 0;
       text-align: center;
+      font-size: 15px;
     }
   }
   .mentors-information{
@@ -732,8 +787,15 @@ p {
       font-size: 10px;
     }
   }
-  .testimonials-block-text h4 {
-    font-size: 15px;
+  .testimonials-block-text{
+    h4{
+      font-size: 15px;
+    }
+  }
+  .website-development-title{
+    h1{
+      font-size: 22px;
+    }
   }
 }
 @media screen and (max-width: 400px) {
@@ -750,8 +812,8 @@ p {
     }
   }
   .testimonials-upper-legs, .testimonials-lower-legs {
-    p {
-      font-size: 60px;
+    i {
+      font-size: 20px;
       padding: 20px 5px;
     }
   }
