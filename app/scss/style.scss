@@ -226,7 +226,7 @@ header{
   }
 }
 .slider-block-text{
-  padding: 10px 5px;
+  padding: 20px 5px;
   h4{
     line-height: 1.5;
   }
@@ -235,15 +235,13 @@ header{
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
-  hr{
-    border: none;
-    border-top: 1px solid $button_color;
-    margin: 0 20px
-  }
 }
 .slider-block-title{
+  display: inline-block;
+  border-bottom: 1px solid $blue_background;
   h2{
-    font-size: 18px;
+    font-weight: normal;
+    font-size: 22px;
     margin: 10px 0;
     color: $font_color;
   }
@@ -362,6 +360,9 @@ header{
 .video-container-title {
   text-align: center;
   padding-bottom: 20px;
+  h1{
+    font-weight: normal;
+  }
 }
 .video-container-text {
   padding: 0 10px 10px;
@@ -398,7 +399,7 @@ header{
   display: flex;
 }
 .mentors-title{
-  h2{
+  h1{
     padding-right: 80px;
     font-weight: normal;
   }
