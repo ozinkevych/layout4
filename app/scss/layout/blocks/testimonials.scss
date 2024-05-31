@@ -59,14 +59,17 @@
 
   }
 }
-.slick-dots li {
-  margin: 0;
-  button:before {
-    font-size: 10px;
-  }
-}
 .testimonials-lower-legs{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
+@media screen and (max-width: 600px) {
+
+  .testimonials-block-text{
+    h4{
+      font-size: 15px;
+    }
+  }
+}
+

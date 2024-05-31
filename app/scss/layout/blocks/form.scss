@@ -134,4 +134,79 @@
   background-color: $button_color;
   color: $background_color_1;
 }
+@media screen and (max-width: 1024px) {
+  .form-block {
+    flex-direction: column;
+  }
+  .information {
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .registration-form {
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 0;
 
+    .h2 {
+      text-align: center;
+    }
+
+    div {
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .information {
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 40px;
+
+    .information-title {
+      h1 {
+        font-size: 21px;
+      }
+    }
+    .information-text{
+      h4{
+        font-size: 13px;
+      }
+    }
+  }
+  .registration-form {
+    max-width: 500px;
+    padding: 0;
+
+    div {
+      max-width: 100%;
+      label {
+        a:after {
+          color: $button_color;
+        }
+      }
+      .form-input, select {
+        max-width: 255px;
+      }
+
+      h2 {
+        font-size: 19px;
+      }
+    }
+  }
+  .form-btn {
+    width: 280px;
+  }
+  .checkbox {
+    display: flex;
+    justify-content: center;
+    width: 287px;
+
+    input {
+      margin-bottom: 10px;
+    }
+  }
+}

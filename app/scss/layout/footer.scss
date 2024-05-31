@@ -1,0 +1,23 @@
+//footer
+.footer-container{
+  @extend %container;
+  text-align: center;
+  padding: 50px 0;
+  div{
+    padding: 10px 0;
+  }
+}
+.footer-container-info{
+  h4{
+    color: #337ab7;
+    padding: 0 10px;
+  }
+}
+.footer-container-conditions {
+  a {
+    &:hover {
+      color: #337ab7;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,7 +1,4 @@
 @import "base/basic_style.scss";
-@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
-@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
-@import url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css');
 @import "base/variables.scss";
 @import "base/mixins.scss";
 a{
@@ -21,318 +18,35 @@ h4 {
   font-size: 16px;
   color: $font_color;
 }
+.slick-dots li {
+  margin: 0;
+  button:before {
+    font-size: 10px;
+  }
+}
 // header
 @import "layout/header";
 //form
-@import "layout/form.scss";
+@import "layout/blocks/form.scss";
 // slider
-@import "layout/website-development.scss";
+@import "layout/blocks/website-development.scss";
 //statistics-block
-@import "layout/statistics-block.scss";
-//testimonials (slider)
-@import "layout/testimonials.scss";
+@import "layout/blocks/statistics-block.scss";
+//testimonials
+@import "layout/blocks/testimonials.scss";
 //video
-@import "layout/video.scss";
+@import "layout/blocks/video.scss";
 // mentors
-@import "layout/mentors.scss";
-// Map-CTA-Footer
-@import "layout/Map-CTA-Footer.scss";
-
-@media screen and (max-width: 1024px) {
-  .header-container {
-    display: block;
-    align-items: center;
-  }
-  .header-logo {
-    display: flex;
-    align-content: center;
-  }
-  .main-list, .header-logo-img {
-    margin: 0 auto;
-  }
-  .main-list li {
-    margin: 5px;
-    padding-bottom: 10px;
-    font-size: 15px;
-  }
-  .form-block {
-    flex-direction: column;
-  }
-  .information {
-    margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
-  }
-  .registration-form {
-    margin: 0 auto;
-    max-width: 768px;
-    padding: 0;
-
-    .h2 {
-      text-align: center;
-    }
-
-    div {
-      margin: 10px auto;
-      display: flex;
-      justify-content: center;
-
-    }
-  }
-  .statistics-block-container {
-    padding: 10px;
-  }
-  .call-block-container {
-    padding: 10px;
-  }
-  .video-container-link {
-    padding: 0 20px;
-    iframe {
-      max-width: 1024px;
-      max-height: 400px;
-    }
-  }
-  .slider-block-title{
-    h2{
-      font-size: 18px;
-    }
-  }
-  .slider-block-text h4 {
-    font-size: 14px;
-  }
-}
+@import "layout/blocks/mentors.scss";
+// map
+@import "layout/blocks/map.scss";
+// cta
+@import "layout/blocks/cta.scss";
+// footer
+@import "layout/footer.scss";
 
 
-@media screen and (max-width: 768px) {
-  .menu {
-    padding: 0 0 10px 0;
-  }
-  .main-list {
-    display: none;
-  }
-  .header-container{
-    max-width: 730px;
-  }
-  .header-container-block {
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-  }
-  .burger-menu {
-    max-width: 768px;
-    display: block;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-  }
-  .burger-icon {
-    width: 25px;
-    height: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    background-color: $button_color;
-    border-radius: 2px;
-    padding: 7px;
-  }
-  .bar {
-    width: 80%;
-    height: 2px;
-    background-color: $background_color_1;
-  }
-  .burger-menu.show {
-    display: flex;
-    justify-content: center;
-  }
-  .main-list.show {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    li {
-      border-right: none;
-      padding: 5px;
-    }
-  }
-  .registration-form {
-    div {
-      label {
-        a:after {
-          color: $button_color;
-        }
-      }
-    }
-  }
-  .information {
-    max-width: 100%;
-    padding-top: 0;
-    padding-bottom: 40px;
 
-    .information-title {
-      h1 {
-        font-size: 21px;
-      }
-    }
-    .information-text{
-      h4{
-        font-size: 13px;
-      }
-    }
-  }
-  .registration-form {
-    max-width: 500px;
-    padding: 0;
-
-    div {
-      max-width: 100%;
-
-      .form-input, select {
-        max-width: 255px;
-      }
-
-      h2 {
-        font-size: 19px;
-      }
-    }
-  }
-  .form-btn {
-    width: 280px;
-  }
-  .checkbox {
-    display: flex;
-    justify-content: center;
-    width: 287px;
-
-    input {
-      margin-bottom: 10px;
-    }
-  }
-  .statistics-container{
-    width: 500px;
-    padding: 20px 0;
-  }
-  .call-container{
-    padding: 20px 0;
-  }
-  .statistics-block-container{
-    padding: 0 10px;
-  }
-  .video-container {
-    padding: 20px 0;
-
-    .video-container-text {
-      padding: 10px 20px;
-    }
-
-    .video-container-link {
-      iframe {
-        max-width: 768px;
-
-        padding: 5px 10px;
-      }
-    }
-  }
-  .video-container-link {
-    padding: 0 20px;
-
-    iframe {
-      max-width: 380px;
-      max-height: 200px;
-    }
-  }
-  .video-container-text {
-
-    h4 {
-    }
-  }
-  .mentors-information {
-    display: flex;
-    flex-direction: column;
-  }
-  .mentors-title {
-    h2 {
-      padding: 0;
-      text-align: center;
-
-    }
-  }
-  .mentors-information-img{
-    display: flex;
-    justify-content: center;
-    img{
-      padding: 0;
-    }
-  }
-  .mentors-information-title{
-    padding: 20px 0;
-    text-align: center;
-  }
-  .mentors-information-text{
-    h4{
-      padding: 5px 0;
-      text-align: center;
-      font-size: 15px;
-    }
-  }
-  .mentors-information{
-    img{
-      width: 70%;
-    }
-  }
-}
-@media screen and (max-width: 600px) {
-  .statistics-container, .call-container {
-    width: 280px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .statistics-block-container {
-    width: 125px;
-    padding: 5px;
-    img {
-      width: 50px;
-    }
-    h2{
-      padding: 10px 0;
-      font-size: 16px;
-    }
-    h4 {
-      font-size: 10px;
-    }
-  }
-  .call-block-container{
-    width: 125px;
-    padding: 5px;
-    .call-block-icons{
-      font-size: 30px;
-    }
-    h2{
-      padding: 10px 0;
-      font-size: 16px;
-    }
-    h4 {
-      font-size: 10px;
-    }
-  }
-  .call-block-text{
-    a{
-      font-size: 10px;
-    }
-  }
-  .testimonials-block-text{
-    h4{
-      font-size: 15px;
-    }
-  }
-  .website-development-title{
-    h1{
-      font-size: 22px;
-    }
-  }
-}

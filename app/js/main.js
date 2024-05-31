@@ -61,21 +61,26 @@ $(document).ready(function() {
         swipeToSlide: true
     });
     // Form validation
+
     const form = document.querySelector('.registration-form');
     const message = document.querySelector('.message');
+    const submitButton = document.querySelector('.form-btn');
 
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Запобігти перезавантаженню сторінки
+        event.preventDefault();
+        form.classList.add('submitted');
 
         if (form.checkValidity()) {
-            // Форма валідна
             message.textContent = 'Форма успішно надіслана!';
             message.classList.add('success');
-            // Додаткова логіка для відправки форми на сервер
         } else {
-            // Форма невалідна
             message.textContent = 'Будь ласка, заповніть всі поля коректно.';
             message.classList.remove('success');
+
+            event.preventDefault();
         }
     });
+    submitButton.addEventListener('click', function(event) {
+    });
+
 });

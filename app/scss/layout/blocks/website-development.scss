@@ -50,4 +50,21 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .slider-block-title{
+    h2{
+      font-size: 18px;
+    }
+  }
+  .slider-block-text h4 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .website-development-title{
+    h1{
+      font-size: 22px;
+    }
+  }
+}
 

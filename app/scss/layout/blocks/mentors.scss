@@ -48,3 +48,39 @@
   color: $blue_background;
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  .mentors-information {
+    display: flex;
+    flex-direction: column;
+  }
+  .mentors-title {
+    h2 {
+      padding: 0;
+      text-align: center;
+
+    }
+  }
+  .mentors-information-img{
+    display: flex;
+    justify-content: center;
+    img{
+      padding: 0;
+    }
+  }
+  .mentors-information-title{
+    padding: 20px 0;
+    text-align: center;
+  }
+  .mentors-information-text{
+    h4{
+      padding: 5px 0;
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+  .mentors-information{
+    img{
+      width: 70%;
+    }
+  }
+}
