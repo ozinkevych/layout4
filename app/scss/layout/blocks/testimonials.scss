@@ -72,4 +72,16 @@
     }
   }
 }
-
+@media screen and (max-width: 400px) {
+  .testimonials-block-title {
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .testimonials-upper-legs, .testimonials-lower-legs {
+    i {
+      font-size: 20px;
+      padding: 20px 5px;
+    }
+  }
+}
