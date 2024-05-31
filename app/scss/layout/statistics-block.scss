@@ -1,0 +1,21 @@
+.statistics-block{
+  background-color: $blue_background;
+}
+.statistics-container{
+  @extend %container;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+}
+
+.statistics-block-container{
+  width: 275px;
+  text-align: center;
+  h2{
+    padding: 20px 0;
+    color: $background_color_1;
+  }
+  h4{
+    color: $background_color_1;
+  }
+}

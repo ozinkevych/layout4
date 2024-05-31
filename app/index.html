@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Model4</title>
     <link rel="stylesheet" href="css/style.min.css">
-
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/slick-carousel/slick/slick.min.js"></script>
-
 </head>
 <body>
 <header>
@@ -17,6 +15,7 @@
             <div class="header-logo">
                 <img class="header-logo-img" src="img/logo_Oxit.png" alt="logo_Oxit">
             </div>
+            <!-- burger menu -->
             <div class="burger-menu">
                 <div class="burger-icon">
                     <div class="bar"></div>
@@ -25,6 +24,7 @@
                 </div>
             </div>
         </div>
+        <!-- Menu -->
         <div class="menu">
             <ul class="main-list">
                 <li><a href="#registration">Головна</a></li>
@@ -39,6 +39,7 @@
 </header>
 <div class="form-container">
     <div class="form-block">
+        <!-- content left -->
         <div class="information">
             <div class="information-title">
                 <h1>Курси програмування у Луцьку</h1>
@@ -47,6 +48,7 @@
                 <h4>Сфера IT розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що повязана з ІТ. Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. ІТ школа ОхІТ створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання. щоб стати ІТ спеціалістом. Чекаємо вас на нших курсах 3 програмування в Луцьку. Старт наступного курсу 3 серпня.</h4>
             </div>
         </div>
+        <!-- registration form -->
         <div class="registration" id="registration">
             <form class="registration-form" novalidate>
                 <div>
@@ -70,7 +72,7 @@
                 </div>
                 <div>
                     <label for="tel">Номер телефону<img src="img/icons/required.png" alt="required"></label>
-                    <input class="form-input" id="tel" name="tel" pattern="[0-9]*" required minlength="10" placeholder="Номер телефону: +38 XXX XX XX XXX">
+                    <input class="form-input" id="tel" name="tel" pattern="\+38[0-9]{10}" required minlength="10" placeholder="Номер телефону: +38 XXX XX XX XXX">
                 </div>
                 <div>
                     <label for="email">Email<img src="img/icons/required.png" alt="required"></label>
@@ -82,6 +84,7 @@
                         <span>Я погоджуюся із <a href="#privacy-policy">Політикою Конфіденційності</a><img src="img/icons/required.png" alt="required"></span>
                     </label>
                 </div>
+                <div class="message" id="successMessage"></div>
                 <button class="form-btn" type="submit">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
             </form>
         </div>
@@ -92,7 +95,9 @@
         <div class="website-development-title">
             <h1>Курс «Розробка сайтів»</h1>
         </div>
+        <!-- website slider -->
         <div class="website-slider">
+            <!-- website slide 1-->
             <div class="slider-block">
                 <div class="slider-block-img">
                     <img src="img/icons/course-icon-1.png" alt="course-icon-1">
@@ -104,6 +109,7 @@
                     <h4>Курс складається з коротких навчальних відео, на яких ти пізнаєш основи WordPress, навчишся створювати сайти різноі складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</h4>
                 </div>
             </div>
+            <!-- website slide 2-->
             <div class="slider-block">
                 <div class="slider-block-img">
                     <img src="img/icons/course-icon-2.png" alt="course-icon-2">
@@ -115,6 +121,7 @@
                     <h4>Для створення чудових сайтів на Drupal 8, цеглинка за цеглинкою, ти пізнаєш секрети основних та додаткових Drupal-модулів (Views, Rules, Panels, Devel, Paragraph та багатьох інших).</h4>
                 </div>
             </div>
+            <!-- website slide 3-->
             <div class="slider-block">
                 <div class="slider-block-img">
                     <img src="img/icons/course-icon-2.png" alt="course-icon-2">
@@ -129,8 +136,10 @@
         </div>
     </div>
 </div>
+<!-- statistics block -->
 <div class="statistics-block">
     <div class="statistics-container">
+        <!-- statistics block element 1-->
         <div class="statistics-block-container">
             <div class="statistics-block-img">
                 <img src="img/icons/statistic-icon-1.png" alt="statistic-icon-1">
@@ -142,6 +151,7 @@
                 <h4>курсів організовано</h4>
             </div>
         </div>
+        <!-- statistics block element 2-->
         <div class="statistics-block-container">
             <div class="statistics-block-img">
                 <img src="img/icons/statistic-icon-2.png" alt="statistic-icon-2">
@@ -153,6 +163,7 @@
                 <h4>годин занять проведено</h4>
             </div>
         </div>
+        <!-- statistics block element 3-->
         <div class="statistics-block-container">
             <div class="statistics-block-img">
                 <img src="img/icons/statistic-icon-3.png" alt="statistic-icon-3">
@@ -164,6 +175,7 @@
                 <h4>студентів навчено</h4>
             </div>
         </div>
+        <!-- statistics block element 4-->
         <div class="statistics-block-container">
             <div class="statistics-block-img">
                 <img src="img/icons/statistic-icon-4.png" alt="statistic-icon-4">
@@ -178,7 +190,9 @@
     </div>
 </div>
 <div class="testimonials" id="reviews">
+    <!-- testimonials slider -->
     <div class="testimonials-slider">
+        <!-- testimonials slide 1 -->
         <div class="testimonials-slide-container">
             <div class="testimonials-block">
                 <div class="testimonials-block-title">
@@ -203,6 +217,7 @@
                 </div>
             </div>
         </div>
+        <!-- testimonials slide 2 -->
         <div class="testimonials-slide-container">
             <div class="testimonials-block">
                 <div class="testimonials-block-title">
@@ -227,6 +242,7 @@
                 </div>
             </div>
         </div>
+        <!-- testimonials slide 3 -->
         <div class="testimonials-slide-container">
             <div class="testimonials-block">
                 <div class="testimonials-block-title">
@@ -253,6 +269,7 @@
         </div>
     </div>
 </div>
+<!-- video -->
 <div class="video" id="video">
     <div class="video-container">
         <div class="video-container-title">
@@ -267,7 +284,9 @@
     </div>
 </div>
 <div class="mentors" id="mentors">
+    <!-- mentors slider -->
     <div class="mentors-slider">
+        <!-- mentors slide 1 -->
         <div class="mentors-slider-container">
             <div class="mentors-block">
                 <div class="mentors-title">
@@ -292,6 +311,7 @@
                 </div>
             </div>
         </div>
+        <!-- mentors slide 2 -->
         <div class="mentors-slider-container">
             <div class="mentors-block">
                 <div class="mentors-title">
@@ -316,6 +336,7 @@
                 </div>
             </div>
         </div>
+        <!-- mentors slide 3 -->
         <div class="mentors-slider-container">
             <div class="mentors-block">
                 <div class="mentors-title">
@@ -342,11 +363,14 @@
         </div>
     </div>
 </div>
+<!-- google map -->
 <div class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2048.1848070407495!2d25.317419865291864!3d50.71460671248067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1sru!2sua!4v1716803515638!5m2!1sru!2sua&amp;zoom=20" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+<!-- CTA -->
 <div class="call" id="cta">
     <div class="call-container">
+        <!-- CTA tel-->
         <div class="call-block-container">
             <div class="call-block-icons">
                 <i class="fa-solid fa-phone"></i>
@@ -358,6 +382,7 @@
                 <a href="tel:+380673321755">+38 067 332 17 55</a>
             </div>
         </div>
+        <!-- CTA e-mail-->
         <div class="call-block-container">
             <div class="call-block-icons">
                 <i class="fa-solid fa-envelope"></i>
@@ -366,9 +391,10 @@
                 <h2>E-mail</h2>
             </div>
             <div class="call-block-text">
-                <h4>ofice@it.volyn.ua</h4>
+                <a href="mailto:ofice@it.volyn.ua">ofice@it.volyn.ua</a>
             </div>
         </div>
+        <!-- CTA address-->
         <div class="call-block-container">
             <div class="call-block-icons">
                 <i class="fa-solid fa-location-dot"></i>
@@ -377,9 +403,10 @@
                 <h2>Адреса</h2>
             </div>
             <div class="call-block-text">
-                <h4>вул. Боженка 34г, Луцьк</h4>
+                <a href="#cta">вул. Боженка 34г, Луцьк</a>
             </div>
         </div>
+        <!-- CTA facebook-->
         <div class="call-block-container">
             <div class="call-block-icons">
                 <i class="fa-brands fa-facebook-f"></i>

@@ -1,0 +1,34 @@
+.video{
+  width: 100%;
+  background-color: $background_color_2;
+  .video-container {
+    @extend %container;
+    padding: 40px 0;
+  }
+}
+.video-container-title {
+  text-align: center;
+  padding-bottom: 20px;
+  h1{
+    font-weight: normal;
+  }
+}
+.video-container-text {
+  padding: 0 10px 10px;
+  text-align: center;
+  line-height: 1.5;
+  h4{
+    font-size: 17px;
+  }
+}
+.video-container-link {
+  display: flex;
+  justify-content: center;
+
+  iframe {
+    max-width: 1020px;
+    width: 100%;
+    height: 500px;
+    padding: 10px 20px;
+  }
+}

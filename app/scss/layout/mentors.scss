@@ -1,0 +1,50 @@
+.mentors {
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.mentors-container{
+  display: flex;
+}
+.testimonials-slide-container{
+  display: flex;
+}
+.mentors-title{
+  h1{
+    padding-right: 80px;
+    font-weight: normal;
+  }
+}
+.mentors-slider {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  max-width: 1190px;
+  padding: 0 15px;
+}
+.mentors-information{
+  display: flex;
+}
+.mentors-information-text{
+  h4{
+    text-align: left;
+    padding: 10px  0 10px 100px;
+    line-height: 1.5;
+
+  }
+}
+.mentors-information{
+  padding: 10px 0;
+  img{
+    padding-left: 40px;
+  }
+}
+.mentors-information-title{
+  padding: 20px  0 20px 100px;
+  text-align: left;
+  color: $blue_background;
+  font-weight: bold;
+}

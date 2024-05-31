@@ -1,0 +1,53 @@
+.website-development{
+  overflow-x: hidden
+}
+.website-development-title{
+  text-align: center;
+  padding-top: 40px;
+  h1{
+    font-weight: normal;
+  }
+}
+.website-slider {
+  padding-bottom: 30px;
+  display: none;
+  @extend %container;
+}
+
+.website-slider {
+  &.slick-slider {
+    display: block;
+  }
+}
+.slider-block-img{
+  img{
+    margin: 0 auto;
+  }
+}
+.slider-block-text{
+  padding: 20px 5px;
+  h4{
+    line-height: 1.5;
+  }
+}
+.slider-block {
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.slider-block-title{
+  display: inline-block;
+  border-bottom: 1px solid $blue_background;
+  h2{
+    font-weight: normal;
+    font-size: 22px;
+    margin: 10px 0;
+    color: $font_color;
+  }
+}
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
